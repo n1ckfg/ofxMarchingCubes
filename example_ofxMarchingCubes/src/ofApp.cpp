@@ -85,10 +85,12 @@ void ofApp::draw(){
 	
 	//draw the mesh
 	normalShader.begin();
-	if (ofIsGLProgrammableRenderer()) {
+	/*
+    if (ofIsGLProgrammableRenderer()) {
 		ofMatrix4x4 normalMatrix = ofMatrix4x4::getTransposedOf((ofGetCurrentMatrix(OF_MATRIX_MODELVIEW)).getInverse());
 		normalShader.setUniformMatrix4f("uNormalMatrix", normalMatrix);
 	}
+     */
 
 	wireframe?	mc.drawWireframe() : mc.draw();
 	
